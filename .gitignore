@@ -1,0 +1,18 @@
+# Dependências do Projeto
+# Pasta onde o npm armazena todos os módulos de dependência
+/node_modules
+/npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de Build/Compilação
+# Se você usar TypeScript ou ferramentas de build (ex: Webpack/Rollup)
+/dist
+/build
+
+# Informações de Ambiente e Credenciais (CRUCIAL para o LocalStack/AWS)
+# Nunca envie variáveis de ambiente ou chaves secretas
+.env
+.env.local
+.DS_Store # (Arquivos de sistema do macOS)
