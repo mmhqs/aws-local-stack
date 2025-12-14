@@ -1,14 +1,32 @@
-# Dependências do Projeto
-# Pasta onde o npm armazena todos os módulos de dependência
+# Back-end
 code/backend/node_modules
-
-# Arquivos de Build/Compilação
-# Se você usar TypeScript ou ferramentas de build (ex: Webpack/Rollup)
 code/backend/dist
 code/backend/build
-
-# Informações de Ambiente e Credenciais (CRUCIAL para o LocalStack/AWS)
-# Nunca envie variáveis de ambiente ou chaves secretas
 .env
 .env.local
 .DS_Store # (Arquivos de sistema do macOS)
+
+# Front-end
+code/frontend/mobile_uploader/build/
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+*.dart.js_sdk.yaml
+.idea/
+.vscode/
+code/frontend/mobile_uploader/android/.gradle
+code/frontend/mobile_uploader/android/local.properties
+code/frontend/mobile_uploader/android/.idea
+code/frontend/mobile_uploader/android/*.iml
+code/frontend/mobile_uploader/ios/.symlinks
+code/frontend/mobile_uploader/ios/Flutter/Generated.xcconfig
+code/frontend/mobile_uploader/ios/Flutter/flutter_export_environment.sh
+code/frontend/mobile_uploader/ios/Runner/Generated.xcconfig
+code/frontend/mobile_uploader/ios/Runner/*.xcworkspace
+code/frontend/mobile_uploader/ios/Runner/project.xcworkspace
+code/frontend/mobile_uploader/ios/Runner/Runner.xcscheme
+code/frontend/mobile_uploader/ios/Runner/xcuserdata
+code/frontend/mobile_uploader/ios/Pods/
+code/frontend/mobile_uploader/ios/.ios-lock/
+code/frontend/mobile_uploader/web/
