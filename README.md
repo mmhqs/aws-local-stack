@@ -1,6 +1,7 @@
 # aws-local-stack
 This repo tests AWS Local Stack :)
-Here it's possible to save a image from your computer in a local S3 bucket that emulates AWS S3 service.
+
+You can save a image from your computer in a local S3 bucket that emulates AWS S3 service.
 
 🎥 Check out a video demo of the project [here](https://www.youtube.com/watch?v=tR2mZI_unSA).
 
