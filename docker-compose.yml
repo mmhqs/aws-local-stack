@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: localstack/localstack:latest
+    container_name: localstack
+    ports:
+      # Expõe a porta principal unificada para todos os serviços AWS
+      - "4566:4566" 
+      # Expõe o dashboard web do LocalStack (opcional, mas útil para visualização)
+      - "8080:8080"
+    environment:
+      # CRUCIAL: Lista os serviços AWS que o LocalStack deve iniciar
+      - SERVICES=s3,sqs,sns,dynamodb 
+      # Configura a região e credenciais padrão para o SDK/CLI
+      - DEFAULT_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      # Habilita o modo de depuração para logs mais detalhados (opcional)
+      - DEBUG=1
+    volumes:
+      # Garante que os dados (buckets, tabelas) persistam entre reinicializações
+      - localstack-data:/var/lib/localstack
+      # Permite a criação de recursos ao iniciar (Hooks de inicialização)
+      - ./localstack-init:/etc/localstack/init/ready.d
+    networks:
+      - lab-network
+
+volumes:
+  localstack-data:
+
+networks:
+  lab-network:
+    # Este network é importante para o seu container Backend se comunicar com o LocalStack
