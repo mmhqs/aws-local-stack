@@ -20,6 +20,10 @@ dependencies:
   
   # Para lidar com caminhos de arquivo (opcional, mas útil)
   path: ^1.8.3
+  cross_file: ^0.3.5+1
+
+  # Necessário para usar MediaType no upload via bytes (solução Web)
+  http_parser: ^4.0.2
 
 dev_dependencies:
   flutter_test:
