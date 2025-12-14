@@ -1,10 +1,12 @@
 import express from 'express';
+import cors from 'cors';
 import multer from 'multer';
 import { uploadFileToS3 } from './s3Service.js'; 
 
 const app = express();
 const port = 3000;
 const S3_ENDPOINT_URL = 'http://localhost:4566';
+app.use(cors());
 
 // Configuração do Multer (mantida aqui por ser um middleware Express)
 const upload = multer({ 
